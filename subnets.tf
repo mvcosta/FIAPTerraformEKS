@@ -47,3 +47,12 @@ resource "aws_subnet" "public-us-east-1b" {
     "kubernetes.io/cluster/demo" = "owned"
   }
 }
+
+
+output "private_subnet_a" {
+  value = "${aws_subnet.private-us-east-1a.id}"
+}
+
+output "private_subnet_b" {
+  value = "${aws_subnet.private-us-east-1b.id}"
+}

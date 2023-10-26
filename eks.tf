@@ -60,3 +60,7 @@ resource "aws_security_group" "node_group_one" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+output "cluster_security_group" {
+  value = "${aws_eks_cluster.demo.vpc_config[0].cluster_security_group_id}"
+}

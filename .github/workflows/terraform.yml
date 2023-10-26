@@ -42,7 +42,7 @@ jobs:
 
       - name: Terraform Apply
         id: apply
-        run: terraform apply -auto-approve -var-file=variables.tfvars
+        run: terraform apply -auto-approve 
 
   terraform_destroy:
     name: "Terraform_destroy"
@@ -69,4 +69,4 @@ jobs:
       - name: Terraform Destroy
         id: destroy
         working-directory: .
-        run: terraform destroy -auto-approve -var-file=variables.tfvars
+        run: terraform destroy -auto-approve 
